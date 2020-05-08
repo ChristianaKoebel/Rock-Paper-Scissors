@@ -45,7 +45,7 @@ def rps():
     computer_win = 0
     n = 1
     while player_move != "q":
-        if player_move != "r" or "p" or "s" or "q":
+        if player_move not in ["r", "p", "s", "q"]:
             print("Invalid move. Enter r, p, s, or q.")
             player_move = input(prompt)
             continue

@@ -1,33 +1,24 @@
 import check # see check.py for the 'check' module
-
-# Helper function for fib_rec:
-
-# fib_acc(n, n0, last, prev) produces the nth Fibonacci number
-#    using the n0th Fibonacci number (last) and the (n0-1)th Fibonacci number (prev)
-# fib_acc: Nat Nat Nat Nat -> Nat
-# requires: n0 <= n
-
-def fib_acc(n, n0, last, prev):
-    if n == n0:
-        return last
-    else:
-        return fib_acc(n, n0 + 1, last + prev, last)
     
-# fib_rec(n) produces the nth Fibonacci number
-# fib_rec: Nat -> Nat
+# fib(n) produces the nth Fibonacci number
+# fib: Nat -> Nat
 # Examples: 
-#   fib_rec(0) => 0
-#   fib_rec(10) => 55
-
-def fib_rec(n):
-    if n == 0:
-        return 0
-    else:
-        return fib_acc(n, 1, 1, 0)
+#   fib(0) => 0
+#   fib(1) => 1
+#   fib(2) => 1
+#   fib(3) => 2
+#   fib(4) => 3
+#   fib(10) => 55
+    
+def fib(n):
+    fib_seq = [0, 1, 1]
+    for i in range(3, n + 1):
+        fib_seq.append(fib_seq[i - 1] + fib_seq[i - 2])
+    return fib_seq[n]
 
 # play_rps() produces None and prints a game of rock, paper, scissors played
 #    between the computer and a human player, who plays their next move after
-#    reading a printed prompt asking them how they want to proceed (either r,p,s, or q).
+#    reading a printed prompt asking them how they want to proceed (either r, p, s, or q).
 
 # play_rps: None -> None
 
@@ -53,9 +44,8 @@ def play_rps():
     player_win = 0
     computer_win = 0
     n = 1
-    fibo_n = fib_rec(n)
+    fibo_n = fib(n)
     while player_move != "q":
-        fibo_n = fib_rec(n)
         if fibo_n % 3 == 0:
             computer_move = "r"
         elif fibo_n % 3 == 1:

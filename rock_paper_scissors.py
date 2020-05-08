@@ -136,7 +136,7 @@ check.expect("T8", play_rps(), None)
 
 # Test 9: Three rounds, all ties
 check.set_input(["p","p","s","q"])
-check.set_screen("3 ties 0 player wins, 0 computer wins")
+check.set_screen("3 ties, 0 player wins, 0 computer wins")
 check.expect("T9", play_rps(), None)
 
 # Test 10: Three rounds, all player wins
@@ -166,7 +166,7 @@ check.expect("T14", play_rps(), None)
 
 # Test 15: Four rounds, all computer wins
 check.set_input(["r","r","p","s","q"])
-check.set_screen("0 ties 0 player wins, 4 computer wins")
+check.set_screen("0 ties, 0 player wins, 4 computer wins")
 check.expect("T15", play_rps(), None)
 
 # Test 16: Four rounds, 1 tie, 1 player win, 2 computer wins

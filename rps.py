@@ -53,6 +53,7 @@ def play_rps():
     player_win = 0
     computer_win = 0
     n = 1
+    fibo_n = fib_rec(n)
     while player_move != "q":
         fibo_n = fib_rec(n)
         if fibo_n % 3 == 0:
@@ -61,39 +62,38 @@ def play_rps():
             computer_move = "p"
         else:
             computer_move = "s"
-        general_message = "Player plays:" + " " + player_move + "." + " Computer plays:" + " " + computer_move + "." + " "
         if player_move == computer_move:
-            print(general_message + "Tied.")
+            print("Player plays:" + " " + player_move + "." + " Computer plays:" + " " + computer_move + "." + " " + "Tied.")
             tied_stats = tied_stats + 1
             n = n + 1
             player_move = input(prompt)
         if player_move == "r" and computer_move == "s":
-            print(general_message + "Player won.")
+            print("Player plays:" + " " + player_move + "." + " Computer plays:" + " " + computer_move + "." + " " + "Player won.")
             player_win = player_win + 1
             n = n + 1
             player_move = input(prompt)
         if player_move == "r" and computer_move == "p":
-            print(general_message + "Computer won.")
+            print("Player plays:" + " " + player_move + "." + " Computer plays:" + " " + computer_move + "." + " " + "Computer won.")
             computer_win = computer_win + 1
             n = n + 1
             player_move = input(prompt)
         if player_move == "p" and computer_move == "r":
-            print(general_message + "Player won.")
+            print("Player plays:" + " " + player_move + "." + " Computer plays:" + " " + computer_move + "." + " " + "Player won.")
             player_win = player_win + 1
             n = n + 1
             player_move = input(prompt)
         if player_move == "p" and computer_move == "s":
-            print(general_message + "Computer won.")
+            print("Player plays:" + " " + player_move + "." + " Computer plays:" + " " + computer_move + "." + " " + "Computer won.")
             computer_win = computer_win + 1
             n = n + 1
             player_move = input(prompt)
         if player_move == "s" and computer_move == "p":
-            print(general_message + "Player won.")
+            print("Player plays:" + " " + player_move + "." + " Computer plays:" + " " + computer_move + "." + " " + "Player won.")
             player_win = player_win + 1
             n = n + 1
             player_move = input(prompt)
         if player_move == "s" and computer_move == "r":
-            print(general_message + "Computer won.")
+            print("Player plays:" + " " + player_move + "." + " Computer plays:" + " " + computer_move + "." + " " + "Computer won.")
             computer_win = computer_win + 1
             n = n + 1
             player_move = input(prompt)

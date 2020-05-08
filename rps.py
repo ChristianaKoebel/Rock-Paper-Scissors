@@ -66,37 +66,37 @@ def play_rps():
             print(general_message + "Tied.")
             tied_stats = tied_stats + 1
             n = n + 1
-            player_choice = input(prompt)
+            player_move = input(prompt)
         if player_move == "r" and computer_move == "s":
             print(general_message + "Player won.")
             player_win = player_win + 1
             n = n + 1
-            player_choice = input(prompt)
+            player_move = input(prompt)
         if player_move == "r" and computer_move == "p":
             print(general_message + "Computer won.")
             computer_win = computer_win + 1
             n = n + 1
-            player_choice = input(prompt)
+            player_move = input(prompt)
         if player_move == "p" and computer_move == "r":
             print(general_message + "Player won.")
             player_win = player_win + 1
             n = n + 1
-            player_choice = input(prompt)
+            player_move = input(prompt)
         if player_move == "p" and computer_move == "s":
             print(general_message + "Computer won.")
             computer_win = computer_win + 1
             n = n + 1
-            player_choice = input(prompt)
+            player_move = input(prompt)
         if player_move == "s" and computer_move == "p":
             print(general_message + "Player won.")
             player_win = player_win + 1
             n = n + 1
-            player_choice = input(prompt)
+            player_move = input(prompt)
         if player_move == "s" and computer_move == "r":
             print(general_message + "Computer won.")
             computer_win = computer_win + 1
             n = n + 1
-            player_choice = input(prompt)
+            player_move = input(prompt)
     print(goodbye_message)
     print("Tied games:" + " " + str(tied_stats) + ".")
     print("Player won" + " " + str(player_win) + " " + "times.")
